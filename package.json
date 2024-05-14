@@ -7,10 +7,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-vue": "^2.3.3",
     "@mdi/font": "6.2.95",
     "@mdi/js": "^7.4.47",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
     "vuetify": "^3.5.8"
   },
   "devDependencies": {

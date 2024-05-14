@@ -1,14 +1,4 @@
 <template>
-  <v-toolbar border>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-    <v-toolbar-title>The Basement</v-toolbar-title>
-    <v-spacer></v-spacer>
-
-    <v-btn icon>
-      <v-icon :icon="`mdiSvg:${mdiAccount}`"></v-icon>
-    </v-btn>
-  </v-toolbar>
   <v-container style="width: 100%; max-width: none">
     <v-row no-gutters>
       <v-col v-for="server in serverArr" :key="server.name" cols="12" sm="4">
@@ -30,14 +20,13 @@ interface Server {
 }
 
 import { defineComponent } from "vue";
-import { mdiAccount } from "@mdi/js";
 
 export default defineComponent({
-  name: "Dashbaord",
+  name: "home",
   props: {
     msg: String,
   },
-  async setup() {
+  setup() {
     const serverArr: Server[] = [
       {
         name: "Test 1",

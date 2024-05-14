@@ -5,16 +5,29 @@
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
+import { createAuth0 } from "@auth0/auth0-vue";
+import Vue from "vue";
+import router from "./router";
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+app.use(
+  createAuth0({
+    domain: "dev-dpuef3rr.us.auth0.com",
+    clientId: "S6tX8j8YIHhDMQglVDVWlM5BOhskgFWz",
+    authorizationParams: {
+      redirect_uri: "http://localhost:3000",
+    },
+  })
+);
+app.use(router);
 
-app.mount('#app')
+registerPlugins(app);
+app.mount("#app");
