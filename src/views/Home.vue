@@ -1,14 +1,18 @@
 <template>
-  <v-container style="width: 100%; max-width: none">
-    <v-row no-gutters>
-      <v-col v-for="server in serverArr" :key="server.name" cols="12" sm="4">
-        <v-card
-          class="card-style"
-          :title="server.name"
-          :text="server.description"
-        ></v-card>
-      </v-col>
-    </v-row>
+  <v-container style="width: 100%; height: 100%; max-width: none">
+    <div style="display: flex; justify-content: center; align-items: center">
+      <h1 class="welcome-title">Welcome to VacationGPT</h1>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <label class="welcome-desc" style="margin: 5%; text-align: center">
+        Plan your perfect vacation with our app! Get detailed travel plans and
+        personalized destination suggestions using VacationGPT's expert
+        guidance.
+      </label>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <v-btn variant="tonal"> Get Started </v-btn>
+    </div>
   </v-container>
 </template>
 
@@ -69,5 +73,18 @@ export default defineComponent({
 .card-style {
   margin: 5%;
   height: 40vh;
+  background-color: rgb(var(--v-theme-secondary)) !important;
+}
+
+.welcome-title {
+  color: rgb(var(--v-theme-accentDark)) !important;
+  margin-top: 2%;
+  font-size: xx-large;
+}
+
+.welcome-desc {
+  color: rgb(var(--v-theme-accentDark)) !important;
+  margin-top: 2%;
+  font-size: large;
 }
 </style>

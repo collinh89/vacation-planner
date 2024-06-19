@@ -1,24 +1,24 @@
 <template>
-  <v-toolbar border>
-    <v-toolbar-title>The Basement</v-toolbar-title>
+  <v-toolbar class="toolbar" border>
+    <v-toolbar-title>VacationGPT</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-menu>
       <template v-slot:activator="{ props }">
         <v-btn
           v-bind="props"
           class="ma-2"
-          color="orange"
+          color="accentOne"
           icon="mdi-account-circle"
         ></v-btn>
       </template>
 
       <v-card variant="tonal">
         <profile />
-        <v-btn @click="logout" class="ma-2" color="orange"> Logout</v-btn>
+        <v-btn @click="logout" class="ma-2" color="accentOne"> Logout</v-btn>
       </v-card>
     </v-menu>
   </v-toolbar>
-  <main>
+  <main class="background">
     <router-view />
   </main>
 </template>
@@ -43,3 +43,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.background {
+  background-color: rgb(var(--v-theme-background)) !important;
+  height: 92vh;
+}
+.toolbar {
+  background-color: rgb(var(--v-theme-accent)) !important;
+}
+</style>
