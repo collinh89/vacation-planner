@@ -11,5 +11,9 @@ export default createRouter({
       path: "/",
       component: () => import("@/views/Home.vue"),
     },
+    {
+      path: "/plan",
+      component: () => import("@/views/Planner.vue"),
+    },
   ],
 });

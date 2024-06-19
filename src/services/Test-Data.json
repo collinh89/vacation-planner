@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Cancun, Mexico",
+    "description": "Cancun is a popular beach destination known for its beautiful white sand beaches, crystal clear waters, and lively nightlife.",
+    "picture": "https://www.planetware.com/photos-large/MEX/mexico-cancun-beach.jpg",
+    "price_range": "$500 - $1000"
+  },
+  {
+    "name": "Koh Samui, Thailand",
+    "description": "Koh Samui is a tropical paradise with stunning beaches, warm waters perfect for swimming, and plenty of water activities to enjoy.",
+    "picture": "https://www.planetware.com/photos-large/THA/thailand-ko-samui-chaweng-beach.jpg",
+    "price_range": "$800 - $1200"
+  },
+  {
+    "name": "Miami, Florida",
+    "description": "Miami is a vibrant city with beautiful beaches, perfect for swimming, and a variety of water sports to try. It also offers a wide range of accommodation options, including condos.",
+    "picture": "https://www.planetware.com/photos-large/USFL/florida-miami-south-beach.jpg",
+    "price_range": "$700 - $1500"
+  },
+  {
+    "name": "Bali, Indonesia",
+    "description": "Bali is a popular destination for beach lovers, with its stunning coastline, warm waters, and variety of water activities. Condos can be found at affordable prices.",
+    "picture": "https://www.planetware.com/photos-large/IDN/indonesia-bali-beach.jpg",
+    "price_range": "$600 - $1000"
+  }
+]
