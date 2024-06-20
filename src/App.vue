@@ -1,6 +1,14 @@
 <template>
   <v-toolbar class="toolbar" border>
-    <v-toolbar-title>VacationGPT</v-toolbar-title>
+    <v-toolbar-title
+      ><v-btn
+        @click="toHome()"
+        style="text-transform: capitalize"
+        variant="text"
+      >
+        VacationGPT
+      </v-btn></v-toolbar-title
+    >
     <v-spacer></v-spacer>
     <v-menu>
       <template v-slot:activator="{ props }">
@@ -26,12 +34,19 @@
 <script lang="ts">
 import { useAuth0 } from "@auth0/auth0-vue";
 import Profile from "./views/Profile.vue";
+import { useRouter } from "vue-router";
 export default {
   components: { Profile },
   setup() {
     const auth0 = useAuth0();
+    const router = useRouter();
+
+    function toHome() {
+      router.push("/");
+    }
 
     return {
+      toHome,
       logout() {
         auth0.logout({
           logoutParams: {

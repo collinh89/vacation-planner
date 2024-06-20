@@ -13,15 +13,17 @@ export default createRouter({
     },
     {
       path: "/plan",
-      component: () => import("@/views/Planner.vue"),
+      component: () => import("@/views/vacation-generation-view/Planner.vue"),
     },
     {
       path: "/recommendations",
-      component: () => import("@/views/Recommendations.vue"),
+      component: () =>
+        import("@/views/vacation-generation-view/Recommendations.vue"),
     },
     {
       path: "/loading",
-      component: () => import("@/views/Loading-Page.vue"),
+      component: () =>
+        import("@/views/vacation-generation-view/Loading-Page.vue"),
     },
   ],
 });

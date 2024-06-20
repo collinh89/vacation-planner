@@ -84,7 +84,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { getVacationRecommendations } from "../services/OpenAPIService";
+import { getVacationRecommendations } from "../../services/OpenAPIService";
 import { useRouter } from "vue-router";
 
 export default defineComponent({

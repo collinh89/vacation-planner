@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { recommendationStore } from "../services/OpenAPIService";
+import { recommendationStore } from "../../services/OpenAPIService";
 
 export default defineComponent({
   name: "Recommendations",
