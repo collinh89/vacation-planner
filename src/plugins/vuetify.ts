@@ -10,7 +10,7 @@ import "vuetify/styles";
 
 // Composables
 import { ThemeDefinition, createVuetify } from "vuetify";
-import { VStepperVertical } from "vuetify/labs/components";
+import { VDateInput, VStepperVertical } from "vuetify/labs/components";
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 const myCustomLightTheme: ThemeDefinition = {
@@ -34,6 +34,7 @@ const myCustomLightTheme: ThemeDefinition = {
 export default createVuetify({
   components: {
     VStepperVertical,
+    VDateInput,
   },
   theme: {
     defaultTheme: "myCustomLightTheme",

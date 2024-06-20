@@ -15,5 +15,9 @@ export default createRouter({
       path: "/plan",
       component: () => import("@/views/Planner.vue"),
     },
+    {
+      path: "/recommendations",
+      component: () => import("@/views/Recommendations.vue"),
+    },
   ],
 });

@@ -1,13 +1,15 @@
 // src/services/OpenAIService.ts
 import axios from "axios";
+import { ref } from "vue";
 
-const apiKey = process.env.VUE_APP_OPENAI_API_KEY;
+const apiKey = import.meta.env.VITE_OPEN_API_KEY;
+export let recommendations = ref("");
 
 interface VacationRequirements {
   destination_type: string;
   budget: string;
-  travel_dates: string;
-  activities: string[];
+  travel_dates: Date[];
+  activities: string;
   accommodation: string;
 }
 
@@ -46,10 +48,16 @@ export async function getVacationRecommendations(
         },
       }
     );
+    console.log(response.data);
 
+    recommendations = response.data.choices[0].text;
     return response.data.choices[0].text;
   } catch (error) {
     console.error("Error fetching vacation recommendations:", error);
     throw error;
   }
+}
+
+export function getGeneratedRecommendations() {
+  return recommendations;
 }

@@ -45,10 +45,6 @@ export default {
 </script>
 
 <style scoped>
-.background {
-  background-color: rgb(var(--v-theme-background)) !important;
-  height: 92vh;
-}
 .toolbar {
   background-color: rgb(var(--v-theme-accent)) !important;
 }
