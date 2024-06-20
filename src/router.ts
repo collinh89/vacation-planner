@@ -19,5 +19,9 @@ export default createRouter({
       path: "/recommendations",
       component: () => import("@/views/Recommendations.vue"),
     },
+    {
+      path: "/loading",
+      component: () => import("@/views/Loading-Page.vue"),
+    },
   ],
 });

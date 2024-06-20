@@ -11,19 +11,14 @@
       </label>
     </div>
     <div style="display: flex; justify-content: center; align-items: center">
-      <v-btn variant="tonal"> Get Started </v-btn>
+      <v-btn @click="GoToPlanner()" variant="tonal"> Get Started </v-btn>
     </div>
   </v-container>
 </template>
 
 <script lang="ts">
-interface Server {
-  name: string;
-  description: string;
-  link: string;
-}
-
 import { defineComponent } from "vue";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "home",
@@ -31,40 +26,14 @@ export default defineComponent({
     msg: String,
   },
   setup() {
-    const serverArr: Server[] = [
-      {
-        name: "Test 1",
-        description: "Test 1 Server Description",
-        link: "www.link1serve.com",
-      },
-      {
-        name: "Test 2",
-        description: "Test 2 Server Description",
-        link: "www.link1serve.com",
-      },
-      {
-        name: "Test 3",
-        description: "Test 3 Server Description",
-        link: "www.link1serve.com",
-      },
-      {
-        name: "Test 4",
-        description: "Test 4 Server Description",
-        link: "www.link1serve.com",
-      },
-      {
-        name: "Test 5",
-        description: "Test 5 Server Description",
-        link: "www.link1serve.com",
-      },
-      {
-        name: "Test 6",
-        description: "Test 6 Server Description",
-        link: "www.link1serve.com",
-      },
-    ];
+    const router = useRouter();
+    // const route = useRoute();
 
-    return { serverArr };
+    function GoToPlanner() {
+      router.push("/plan");
+    }
+
+    return { GoToPlanner };
   },
 });
 </script>

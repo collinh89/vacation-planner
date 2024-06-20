@@ -1,10 +1,15 @@
 // src/services/OpenAIService.ts
 import axios from "axios";
 import { ref } from "vue";
+import { reactive } from "vue";
+import { useRouter } from "vue-router";
 
 const apiKey = import.meta.env.VITE_OPEN_API_KEY;
-export let recommendations = ref("");
+const router = useRouter();
 
+export const recommendationStore = reactive({
+  recommendations: "",
+});
 interface VacationRequirements {
   destination_type: string;
   budget: string;
@@ -48,16 +53,11 @@ export async function getVacationRecommendations(
         },
       }
     );
-    console.log(response.data);
 
-    recommendations = response.data.choices[0].text;
+    recommendationStore.recommendations = response.data.choices[0].text;
     return response.data.choices[0].text;
   } catch (error) {
     console.error("Error fetching vacation recommendations:", error);
     throw error;
   }
-}
-
-export function getGeneratedRecommendations() {
-  return recommendations;
 }

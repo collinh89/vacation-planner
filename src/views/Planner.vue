@@ -79,20 +79,19 @@
         </v-btn>
       </div>
     </form>
-    <div v-if="recommendations">
-      <h2>Recommendations:</h2>
-      <p>{{ recommendations }}</p>
-    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { getVacationRecommendations } from "../services/OpenAPIService";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "VacationPlanner",
   setup() {
+    const router = useRouter();
+
     const requirements = ref({
       destination_type: "",
       budget: "",
@@ -101,18 +100,17 @@ export default defineComponent({
       accommodation: "",
     });
 
-    const recommendations = ref("");
-
     const fetchRecommendations = async () => {
       try {
         const dateRange = requirements.value["travel_dates"];
         const startDate = dateRange[0];
         const endDate = dateRange[dateRange.length - 1];
+        router.push("/loading");
 
         requirements.value["travel_dates"] = [startDate, endDate];
-        recommendations.value = await getVacationRecommendations(
-          requirements.value
-        );
+        await getVacationRecommendations(requirements.value).then(() => {
+          router.push("/recommendations");
+        });
       } catch (error) {
         console.error("Error fetching recommendations:", error);
       }
@@ -120,7 +118,6 @@ export default defineComponent({
 
     return {
       requirements,
-      recommendations,
       fetchRecommendations,
     };
   },
