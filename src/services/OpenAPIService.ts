@@ -12,25 +12,28 @@ export const recommendationStore = reactive({
 });
 interface VacationRequirements {
   destination_type: string;
+  original_destination: string;
   budget: string;
   travel_dates: Date[];
-  activities: string;
+  activities: string[];
   accommodation: string;
 }
 
 export async function getVacationRecommendations(
   requirements: VacationRequirements
 ): Promise<string> {
-  const prompt = `Provide vacation recommendations in JSON format based on the following requirements:
+  const prompt = `Provide vacation 5 recommendations in JSON Array format based on the following requirements:
   Requirements: ${JSON.stringify(requirements)}
   Format:
   [
     {
       "name": "Place Name",
-      "description": "Detailed description of the place.",
-      "picture": "URL of the picture",
-      "price_range": "Estimated price range"
-    },
+      "description": "Detailed paragraph of the place.",
+      "price_range": "Estimated price range",
+      "time_of_travel: "An accurate distance between original_destination and destination_type and how long it will take to travel by all forms of travel"
+      "links": "Array of JSON objects for URL links for the tpye of accommodations the user listed. If accommodation includes VRBO or AirBnb have the link also search the site. For VRBO the link should follow the format of https://www.vrbo.com/search?destination=Disney%20Springs%E2%84%A2 and Airbnb should follow this format: https://www.airbnb.com/s/Lake-of-the-Ozarks--MO--United-States/homes". If Hotel or Condo have the format be https://www.hotels.com/Hotel-Search?destination=Gatlinburg%2C%20Tennessee,
+      "excursions": "Array of JSON objects for URL Links for popular excursion in the area" 
+      },
     ...
   ]
   `;
@@ -41,7 +44,7 @@ export async function getVacationRecommendations(
       {
         model: "gpt-3.5-turbo-instruct",
         prompt: prompt,
-        max_tokens: 500,
+        max_tokens: 2000,
         n: 1,
         stop: null,
         temperature: 0.7,
@@ -55,6 +58,7 @@ export async function getVacationRecommendations(
     );
 
     recommendationStore.recommendations = response.data.choices[0].text;
+    console.log(response.data.choices[0].text);
     return response.data.choices[0].text;
   } catch (error) {
     console.error("Error fetching vacation recommendations:", error);

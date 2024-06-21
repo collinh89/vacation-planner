@@ -20,8 +20,8 @@ const app = createApp(App);
 
 app.use(
   createAuth0({
-    domain: "dev-dpuef3rr.us.auth0.com",
-    clientId: "S6tX8j8YIHhDMQglVDVWlM5BOhskgFWz",
+    domain: import.meta.env.VITE_AUTH_0_DOMAIN,
+    clientId: import.meta.env.VITE_AUTH_0_ClIENT_ID,
     authorizationParams: {
       redirect_uri: "http://localhost:3000",
     },
