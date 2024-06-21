@@ -22,7 +22,7 @@ interface VacationRequirements {
 export async function getVacationRecommendations(
   requirements: VacationRequirements
 ): Promise<string> {
-  const prompt = `Provide vacation 5 recommendations in JSON Array format based on the following requirements:
+  const prompt = `Provide  5 vacation recommendations as an array of JSON objects based on the following requirements:
   Requirements: ${JSON.stringify(requirements)}
   Format:
   [
@@ -31,7 +31,7 @@ export async function getVacationRecommendations(
       "description": "Detailed paragraph of the place.",
       "price_range": "Estimated price range",
       "time_of_travel: "An accurate distance between original_destination and destination_type and how long it will take to travel by all forms of travel"
-      "links": "Array of JSON objects for URL links for the tpye of accommodations the user listed. If accommodation includes VRBO or AirBnb have the link also search the site. For VRBO the link should follow the format of https://www.vrbo.com/search?destination=Disney%20Springs%E2%84%A2 and Airbnb should follow this format: https://www.airbnb.com/s/Lake-of-the-Ozarks--MO--United-States/homes". If Hotel or Condo have the format be https://www.hotels.com/Hotel-Search?destination=Gatlinburg%2C%20Tennessee,
+      "links": "Array of JSON objects in the format of {name: VRBO, site: vrbo.com} for URL links for the tpye of accommodations the user listed. If accommodation includes VRBO or AirBnb have the link also search the site. For VRBO the link should follow the format of https://www.vrbo.com/search?destination=Disney%20Springs%E2%84%A2 and Airbnb should follow this format: https://www.airbnb.com/s/Lake-of-the-Ozarks--MO--United-States/homes for hotels use this url format https://www.booking.com/searchresults.html?ss=Lake+Tahoe",
       "excursions": "Array of JSON objects for URL Links for popular excursion in the area" 
       },
     ...

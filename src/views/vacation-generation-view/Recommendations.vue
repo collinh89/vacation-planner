@@ -27,7 +27,7 @@
             >
               <v-card-title>{{ link.name }}</v-card-title>
               <v-card-text>
-                <a :href="link.url">{{ link.url }}</a>
+                <a :href="link.site">{{ link.site }}</a>
               </v-card-text>
             </v-card>
             <br />
@@ -36,7 +36,7 @@
               style="padding-bottom: 5%"
               v-for="e in n.excursions"
               class="small"
-              >{{ e.name }}: <a :href="e.url">{{ e.url }}</a
+              >{{ e.name }}: <a :href="e.site">{{ e.site }}</a
               ><br
             /></span>
           </div>
@@ -59,15 +59,15 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// import { recommendationStore } from "../../services/OpenAPIService";
-import { TestData } from "../../services/Test-Data";
+import { recommendationStore } from "../../services/OpenAPIService";
+// import { TestData } from "../../services/Test-Data";
 
 export default defineComponent({
   name: "Recommendations",
   setup() {
-    // const recommendations = JSON.parse(recommendationStore.recommendations);
-    // console.log(recommendations);
-    const recommendations = TestData;
+    console.log(recommendationStore.recommendations);
+    const recommendations = JSON.parse(recommendationStore.recommendations);
+    // const recommendations = TestData;
 
     return {
       recommendations,

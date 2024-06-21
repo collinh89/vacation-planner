@@ -1,161 +1,184 @@
 export const TestData = [
   {
-    name: "Gatlinburg, TN",
+    name: "Lake Tahoe",
     description:
-      "Gatlinburg is a charming mountain town nestled in the Great Smoky Mountains. It offers stunning views, great hiking trails, and a bustling downtown area with plenty of restaurants and bars to choose from. Accommodations range from cozy cabins to luxury resorts.",
-    price_range: "$100-$300 per night",
-    time_of_travel: "Approximately 6 hours driving time from Breese, IL",
-    links: [
-      {
-        name: "Vrbo",
-        url: "https://www.vrbo.com/search?destination=Gatlinburg%2C%20TN",
-      },
-      {
-        name: "Airbnb",
-        url: "https://www.airbnb.com/s/Gatlinburg--TN--United-States/homes",
-      },
-      {
-        name: "Hotel",
-        url: "https://www.hotels.com/search.do?resolved-location=CITY%3A1566788%3AUNKNOWN%3AUNKNOWN&destination-id=1566788&q-destination=Gatlinburg,%20TN,%20United%20States%20of%20America&q-check-in=2024-06-23&q-check-out=2024-06-29&q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
-      },
-    ],
-    excursions: [
-      {
-        name: "Great Smoky Mountains National Park",
-        url: "https://www.nps.gov/grsm/index.htm",
-      },
-      {
-        name: "Ober Gatlinburg Amusement Park & Ski Area",
-        url: "https://obergatlinburg.com/",
-      },
-    ],
-  },
-  {
-    name: "Aspen, CO",
-    description:
-      "Aspen is a popular ski town known for its world-class slopes and luxurious accommodations. However, it also offers plenty of summer activities such as hiking, mountain biking, and rafting. The town has a vibrant food and nightlife scene, making it a great destination for those who enjoy good food and drinks.",
-    price_range: "$300-$500 per night",
+      "Lake Tahoe is a large freshwater lake in the Sierra Nevada Mountains, straddling the border of California and Nevada. It is known for its crystal clear blue waters and sandy beaches, making it the perfect destination for swimming and lounging on the beach. The area is also home to a variety of restaurants and bars, offering delicious food and drinks for all budgets.",
+    price_range: "$$ - $$$",
     time_of_travel:
-      "Approximately 18 hours driving time from Breese, IL or a 3 hour flight",
+      "Approximately 2000 miles from Breese, IL, taking about 1 day and 7 hours by car, or 6 hours by plane.",
     links: [
       {
-        name: "Vrbo",
-        url: "https://www.vrbo.com/search?destination=Aspen%2C%20CO",
+        name: "VRBO",
+        site: "https://www.vrbo.com/search?destination=Lake%20Tahoe",
       },
       {
         name: "Airbnb",
-        url: "https://www.airbnb.com/s/Aspen--CO--United-States/homes",
+        site: "https://www.airbnb.com/s/Lake-Tahoe--United-States/homes",
       },
       {
         name: "Hotel",
-        url: "https://www.hotels.com/search.do?resolved-location=CITY%3A1490025%3AUNKNOWN%3AUNKNOWN&destination-id=1490025&q-destination=Aspen,%20CO,%20United%20States%20of%20America&q-check-in=2024-06-23&q-check-out=2024-06-29&q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
-      },
-    ],
-    excursions: [
-      {
-        name: "Aspen Mountain",
-        url: "https://www.aspensnowmass.com/our-mountains/aspen-mountain",
+        site: "https://www.booking.com/searchresults.html?dest_id=-114116;dest_type=city",
       },
       {
-        name: "Maroon Bells",
-        url: "https://www.fs.usda.gov/recarea/whiteriver/recarea/?recid=81196",
-      },
-    ],
-  },
-  {
-    name: "Banff, AB, Canada",
-    description:
-      "Banff is a picturesque mountain town in Alberta, Canada. It's surrounded by breathtaking landscapes and offers a wide range of outdoor activities such as hiking, skiing, and wildlife viewing. The town also has a variety of accommodations to choose from, including cozy lodges and luxury hotels.",
-    price_range: "$200-$500 per night",
-    time_of_travel:
-      "Approximately 30 hours driving time from Breese, IL or a 4 hour flight",
-    links: [
-      {
-        name: "Vrbo",
-        url: "https://www.vrbo.com/search?destination=Banff%2C%20AB%2C%20Canada",
-      },
-      {
-        name: "Airbnb",
-        url: "https://www.airbnb.com/s/Banff--AB--Canada/homes",
-      },
-      {
-        name: "Hotel",
-        url: "https://www.hotels.com/search.do?resolved-location=CITY%3A1653289%3AUNKNOWN%3AUNKNOWN&destination-id=1653289&q-destination=Banff,%20AB,%20Canada&q-check-in=2024-06-23&q-check-out=2024-06-29&q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
-      },
-    ],
-    excursions: [
-      {
-        name: "Banff National Park",
-        url: "https://www.pc.gc.ca/en/pn-np/ab/banff",
-      },
-      {
-        name: "Lake Louise",
-        url: "https://www.banfflakelouise.com/",
-      },
-    ],
-  },
-  {
-    name: "Estes Park, CO",
-    description:
-      "Estes Park is a charming mountain town located at the base of Rocky Mountain National Park. It offers a variety of outdoor activities such as hiking, fishing, and wildlife viewing. The town also has a vibrant arts and culture scene, with galleries, museums, and live music venues. Accommodations range from cozy cabins to boutique hotels.",
-    price_range: "$100-$400 per night",
-    time_of_travel:
-      "Approximately 13 hours driving time from Breese, IL or a 2 hour flight",
-    links: [
-      {
-        name: "Vrbo",
-        url: "https://www.vrbo.com/search?destination=Estes%20Park%2C%20CO",
-      },
-      {
-        name: "Airbnb",
-        url: "https://www.airbnb.com/s/Estes-Park--CO--United-States/homes",
-      },
-      {
-        name: "Hotel",
-        url: "https://www.hotels.com/search.do?resolved-location=CITY%3A1494812%3AUNKNOWN%3AUNKNOWN&destination-id=1494812&q-destination=Estes%20Park,%20CO,%20United%20States%20of%20America&q-check-in=2024-06-23&q-check-out=2024-06-29&q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
-      },
-    ],
-    excursions: [
-      {
-        name: "Rocky Mountain National Park",
-        url: "https://www.nps.gov/romo/index.htm",
-      },
-      {
-        name: "Stanley Hotel",
-        url: "https://www.stanleyhotel.com/",
-      },
-    ],
-  },
-  {
-    name: "Lake Tahoe, CA",
-    description:
-      "Lake Tahoe is a stunning alpine lake known for its crystal clear waters and beautiful mountain scenery. It offers a variety of outdoor activities such as hiking, skiing, and boating. The town also has a lively nightlife scene, with casinos, bars, and restaurants. Accommodations range from cozy cabins to luxury resorts.",
-    price_range: "$200-$500 per night",
-    time_of_travel:
-      "Approximately 30 hours driving time from Breese, IL or a 4 hour flight",
-    links: [
-      {
-        name: "Vrbo",
-        url: "https://www.vrbo.com/search?destination=Lake%20Tahoe%2C%20CA",
-      },
-      {
-        name: "Airbnb",
-        url: "https://www.airbnb.com/s/Lake-Tahoe--CA--United-States/homes",
-      },
-      {
-        name: "Hotel",
-        url: "https://www.hotels.com/search.do?resolved-location=CITY%3A1510974%3AUNKNOWN%3AUNKNOWN&destination-id=1510974&q-destination=Lake%20Tahoe,%20CA,%20United%20States%20of%20America&q-check-in=2024-06-23&q-check-out=2024-06-29&q-rooms=1&q-room-0-adults=2&q-room-0-children=0",
+        name: "Condo",
+        site: "https://www.homeaway.com/search/keywords:lake-tahoe",
       },
     ],
     excursions: [
       {
         name: "Emerald Bay State Park",
-        url: "https://www.parks.ca.gov/?page_id=1171",
+        site: "https://www.parks.ca.gov/?page_id=506",
       },
       {
         name: "Heavenly Mountain Resort",
-        url: "https://www.skiheavenly.com/",
+        site: "https://www.skiheavenly.com/",
       },
+      { name: "Vikingsholm Castle", site: "https://www.vikingsholm.com/" },
+    ],
+  },
+  {
+    name: "Lake Placid",
+    description:
+      "Located in the Adirondack Mountains of upstate New York, Lake Placid is a charming village known for its picturesque lake and outdoor activities. Visitors can enjoy swimming, boating, and sunbathing on the lake's beaches, as well as hiking and biking through the surrounding mountains. The area also offers a variety of dining options, from casual eateries to fine dining restaurants.",
+    price_range: "$ - $$",
+    time_of_travel:
+      "Approximately 1000 miles from Breese, IL, taking about 16 hours by car, or 2 hours by plane.",
+    links: [
+      {
+        name: "VRBO",
+        site: "https://www.vrbo.com/search?destination=Lake%20Placid%2C%20NY",
+      },
+      {
+        name: "Airbnb",
+        site: "https://www.airbnb.com/s/Lake-Placid--NY--United-States/homes",
+      },
+      {
+        name: "Hotel",
+        site: "https://www.booking.com/searchresults.html?dest_id=20035972;dest_type=city",
+      },
+      {
+        name: "Condo",
+        site: "https://www.homeaway.com/search/keywords:lake-placid-ny",
+      },
+    ],
+    excursions: [
+      { name: "Whiteface Mountain", site: "https://www.whiteface.com/" },
+      {
+        name: "Mirror Lake",
+        site: "https://www.lakeplacid.com/do/swimming-beaches/mirror-lake",
+      },
+      {
+        name: "Adirondack Scenic Railroad",
+        site: "https://www.adirondackrr.com/",
+      },
+    ],
+  },
+  {
+    name: "Lake Havasu",
+    description:
+      "Located in western Arizona, Lake Havasu is a popular vacation destination known for its warm waters and sandy beaches. Visitors can enjoy a variety of water activities, such as swimming, kayaking, and jet skiing. The area also offers a vibrant nightlife scene, with plenty of restaurants and bars offering delicious food and drinks.",
+    price_range: "$ - $$",
+    time_of_travel:
+      "Approximately 1800 miles from Breese, IL, taking about 1 day and 5 hours by car, or 3 hours by plane.",
+    links: [
+      {
+        name: "VRBO",
+        site: "https://www.vrbo.com/search?destination=Lake%20Havasu%2C%20AZ",
+      },
+      {
+        name: "Airbnb",
+        site: "https://www.airbnb.com/s/Lake-Havasu-City--AZ--United-States/homes",
+      },
+      {
+        name: "Hotel",
+        site: "https://www.booking.com/searchresults.html?dest_id=20088334;dest_type=city",
+      },
+      {
+        name: "Condo",
+        site: "https://www.homeaway.com/search/keywords:lake-havasu-city-az",
+      },
+    ],
+    excursions: [
+      {
+        name: "London Bridge",
+        site: "https://www.golakehavasu.com/attractions/london-bridge",
+      },
+      {
+        name: "Havasu National Wildlife Refuge",
+        site: "https://www.fws.gov/refuge/Havasu/",
+      },
+      {
+        name: "Havasu Falls",
+        site: "https://www.grandcanyon.com/waterfalls/havasu-falls/",
+      },
+    ],
+  },
+  {
+    name: "Lake Superior",
+    description:
+      "The largest of the Great Lakes, Lake Superior is a stunning destination for a lakeside vacation. Located in both the United States and Canada, this lake offers a variety of activities, including swimming, fishing, and boating. The area is also home to numerous charming towns and cities, each with their own unique dining options.",
+    price_range: "$ - $$",
+    time_of_travel:
+      "Approximately 500 miles from Breese, IL, taking about 8 hours by car, or 2 hours by plane.",
+    links: [
+      {
+        name: "VRBO",
+        site: "https://www.vrbo.com/search?destination=Lake%20Superior",
+      },
+      { name: "Airbnb", site: "https://www.airbnb.com/s/Lake-Superior/homes" },
+      {
+        name: "Hotel",
+        site: "https://www.booking.com/searchresults.html?dest_id=20088334;dest_type=city",
+      },
+      {
+        name: "Condo",
+        site: "https://www.homeaway.com/search/keywords:lake-superior",
+      },
+    ],
+    excursions: [
+      {
+        name: "Pictured Rocks National Lakeshore",
+        site: "https://www.nps.gov/piro/index.htm",
+      },
+      { name: "Split Rock Lighthouse", site: "https://www.mnhs.org/splitrock" },
+      {
+        name: "Apostle Islands National Lakeshore",
+        site: "https://www.nps.gov/apis/index.htm",
+      },
+    ],
+  },
+  {
+    name: "Lake Chelan",
+    description:
+      "Nestled in the Cascade Mountains of Washington state, Lake Chelan is a picturesque destination for a lakeside vacation. The lake offers a variety of water activities, such as swimming, boating, and fishing. The area is also known for its wineries, making it the perfect destination for wine lovers.",
+    price_range: "$ - $$",
+    time_of_travel:
+      "Approximately 2000 miles from Breese, IL, taking about 1 day and 7 hours by car, or 5 hours by plane.",
+    links: [
+      {
+        name: "VRBO",
+        site: "https://www.vrbo.com/search?destination=Lake%20Chelan",
+      },
+      {
+        name: "Airbnb",
+        site: "https://www.airbnb.com/s/Lake-Chelan--WA--United-States/homes",
+      },
+      {
+        name: "Hotel",
+        site: "https://www.booking.com/searchresults.html?dest_id=20088334;dest_type=city",
+      },
+      {
+        name: "Condo",
+        site: "https://www.homeaway.com/search/keywords:lake-chelan",
+      },
+    ],
+    excursions: [
+      {
+        name: "Lake Chelan State Park",
+        site: "https://parks.state.wa.us/513/Lake-Chelan",
+      },
+      { name: "Chelan Seaplanes", site: "https://chelanseaplanes.com/" },
+      { name: "Tunnel Hill Winery", site: "https://www.tunnelhillwinery.com/" },
     ],
   },
 ];
