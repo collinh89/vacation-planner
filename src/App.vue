@@ -1,23 +1,35 @@
 <template>
   <v-toolbar class="toolbar" border>
-    <v-toolbar-title
-      ><v-btn
-        @click="toHome()"
-        style="text-transform: capitalize"
-        variant="text"
-      >
-        VacationGPT
-      </v-btn></v-toolbar-title
-    >
     <v-spacer></v-spacer>
+
+    <v-btn class="toolbar-btn" variant="text">
+      <RouterLink style="text-decoration: none; color: inherit" to="/plan">
+        Idea Generator</RouterLink
+      >
+    </v-btn>
+    <v-btn class="toolbar-btn" variant="text">
+      <RouterLink style="text-decoration: none; color: inherit" to="/"
+        >Vacation Planner</RouterLink
+      >
+    </v-btn>
+    <v-spacer></v-spacer>
+
+    <v-img
+      class="toolbar-btn"
+      @click="toHome()"
+      src="./assets/VacationGPT-Dark-Logo.png"
+    >
+    </v-img>
+    <v-spacer></v-spacer>
+
+    <v-btn class="toolbar-btn" variant="text">
+      <RouterLink style="text-decoration: none; color: inherit" to="/">
+        My Vacations</RouterLink
+      >
+    </v-btn>
     <v-menu>
       <template v-slot:activator="{ props }">
-        <v-btn
-          v-bind="props"
-          class="ma-2"
-          color="accentOne"
-          icon="mdi-account-circle"
-        ></v-btn>
+        <v-btn class="toolbar-btn" v-bind="props">Menu</v-btn>
       </template>
 
       <v-card variant="tonal">
@@ -25,6 +37,7 @@
         <v-btn @click="logout" class="ma-2" color="accentOne"> Logout</v-btn>
       </v-card>
     </v-menu>
+    <v-spacer></v-spacer>
   </v-toolbar>
   <main class="background">
     <router-view />
@@ -61,6 +74,14 @@ export default {
 
 <style scoped>
 .toolbar {
+  height: 80px;
   background-color: rgb(var(--v-theme-accent)) !important;
+}
+
+.toolbar ::v-deep .v-toolbar__content {
+  height: 80px !important;
+}
+.toolbar-btn {
+  min-width: 12vw;
 }
 </style>

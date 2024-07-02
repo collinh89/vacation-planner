@@ -1,8 +1,7 @@
 <template>
-  <v-container style="width: 100%; height: 100%; max-width: none">
-    <div style="display: flex; justify-content: center; align-items: center">
-      <h1 class="welcome-title">Welcome to VacationGPT</h1>
-    </div>
+  <v-img src="../assets/VacationGPT-Hero.png"></v-img>
+
+  <v-container class="home-page-style">
     <div style="display: flex; justify-content: center; align-items: center">
       <label class="welcome-desc" style="margin: 5%; text-align: center">
         Plan your perfect vacation with our app! Get detailed travel plans and
@@ -39,17 +38,18 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.card-style {
-  margin: 5%;
-  height: 40vh;
-  background-color: rgb(var(--v-theme-secondary)) !important;
+.home-page-style {
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  max-width: none;
 }
 
-.welcome-title {
+/* .welcome-title {
   color: rgb(var(--v-theme-accentDark)) !important;
   margin-top: 2%;
   font-size: xx-large;
-}
+} */
 
 .welcome-desc {
   color: rgb(var(--v-theme-accentDark)) !important;
